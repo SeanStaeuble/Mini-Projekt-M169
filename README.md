@@ -1,6 +1,10 @@
 # Mini-Projekt-M169 Anleitung
 Hier ist eine Anleitung für das ausführen des Dockerfiles und das Starten der Webseite:
 
+## Vorbereitung
+Dateien aus dem Git nehmen und beide in ein Verzeichnis packen.
+Dann in dieses Verzeichnis wechseln und mit der Anleitung fortfahren.
+
 ## Image bauen
 docker build -t mini_projekt_webseite .
 
