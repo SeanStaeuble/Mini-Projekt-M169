@@ -12,5 +12,6 @@ docker build -t mini_projekt_webseite .
 docker run -d --name mini_projekt_webseite -p 8080:80 -v $(pwd)/logs:/var/log/nginx mini_projekt_webseite
 
 ## HTML Bearbeiten
-docker exec -it mini_projekt_webseite cat /usr/share/nginx/html/index.html
-
+docker exec -it mini_projekt_webseite bash
+apt-get update && apt-get install -y nano
+nano /usr/share/nginx/html/index.html
