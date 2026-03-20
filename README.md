@@ -10,3 +10,7 @@ docker build -t mini_projekt_webseite .
 
 ## Container starten (Port 8080, Logs lokal speichern)
 docker run -d -p 8080:80 -v $(pwd)/logs:/var/log/nginx mini_projekt_webseite
+
+## HTML Bearbeiten
+docker exec -it mini_projekt_webseite cat /usr/share/nginx/html/index.html
+
