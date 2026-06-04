@@ -1,4 +1,4 @@
-# Mini-Projekt-M169 Anleitung
+# Auftrag-AWS-M169 Anleitung
 Hier ist eine Anleitung für das ausführen des Dockerfiles und das Starten der Webseite:
 
 ## Vorbereitung
