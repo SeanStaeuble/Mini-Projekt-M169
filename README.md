@@ -33,7 +33,7 @@ Verbindung mit http://"public-ip der Instanz":8080
 
 # Wordpress
 ## Wordpress-Verzeichniss
-cd wordpress
+cd worpress (Schreibfehler beim Verzeichnisnamen)
 
 ## Docker Compose installieren
 ### Abhängigkeiten installieren
