@@ -16,6 +16,7 @@ Port 22 freigeben für 0.0.0.0/0
 ### In der Ubuntu-Instanz mit Docker das Git clonene
 git clone https://github.com/SeanStaeuble/Mini-Projekt-M169.git
 
+# Mini-Projekt
 ## Image bauen
 docker build -t mini_projekt_webseite .
 
@@ -26,3 +27,17 @@ docker run -d --name mini_projekt_webseite -p 8080:80 -v $(pwd)/logs:/var/log/ng
 docker exec -it mini_projekt_webseite bash
 apt-get update && apt-get install -y nano
 nano /usr/share/nginx/html/index.html
+
+## Verbinden auf Mini-Projekt
+Verbindung mit http://"public-ip der Instanz":8080
+
+# Wordpress
+## Wordpress-Verzeichniss
+cd wordpress
+
+## Image bauen
+docker build -t wordpress .
+
+## Container starten (Port 8081, Logs lokal speichern)
+
+
