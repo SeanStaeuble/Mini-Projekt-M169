@@ -35,9 +35,32 @@ Verbindung mit http://"public-ip der Instanz":8080
 ## Wordpress-Verzeichniss
 cd wordpress
 
-## Image bauen
-docker build -t wordpress .
+## Docker Compose installieren
+### Abhängigkeiten installieren
+sudo apt-get install -y ca-certificates curl gnupg
 
-## Container starten (Port 8081, Logs lokal speichern)
+### Docker GPG-Key hinzufügen
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+### Docker-Repository hinzufügen
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo $VERSION_CODENAME) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+### Docker + Compose installieren
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+## Image bauen
+docker compose up -d
+
+## Verinden auf Wordpress
+Verbindung mit http://"public-ip der Instanz":8081
+
+## Wordpress installation
+Installation abschliessen und Benutzer mit Passwort erstellen.
+
+## Beispielseite von Wordpress bearbeiten
+Mit Login bei Wordpress anmelden und dann Beispielseite überarbeiten.
 
 
