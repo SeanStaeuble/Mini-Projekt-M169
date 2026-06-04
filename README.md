@@ -2,13 +2,18 @@
 Hier ist eine Anleitung für das ausführen des Dockerfiles und das Starten der Webseite:
 
 ## Vorbereitung
-# In Sicherheitsgruppe Ports freigeben
+### In Sicherheitsgruppe Ports freigeben
 Port 8080 freigeben für 0.0.0.0/0
+
 Port 8081 freigeben für 0.0.0.0/0
+
 Port 80 freigeben für 0.0.0.0/0
+
 Port 443 freigeben für 0.0.0.0/0
+
 Port 22 freigeben für 0.0.0.0/0
-# In der Ubuntu-Instanz mit Docker das Git clonene
+
+### In der Ubuntu-Instanz mit Docker das Git clonene
 git clone https://github.com/SeanStaeuble/Mini-Projekt-M169.git
 
 ## Image bauen
